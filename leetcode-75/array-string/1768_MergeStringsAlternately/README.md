@@ -18,23 +18,16 @@ The first approach is to take consideration of the pointer of every word. So, le
 ```java []
 class Solution {
     public String mergeAlternately (String word1, String word2) {
-    // ? Create a StringBuilder to efficiently build the result string
-    StringBuilder completeWord = new StringBuilder();
-
-    // ? Initialize two pointers to traverse both strings
-    int p1 = 0;
-    int p2 = 0;
-
-    // ? Iterate through both strings until both pointers reach the end of their resépectives strings
+    StringBuilder mergedString = new StringBuilder();
+    int p1 = 0, p2 = 0; //? pointer for word2
+    // ? Iterate until both indices have reached the end of their respective strings
     while (p1 < word1.length() || p2 < word2.length()) {
-      // ? Append the current character from words if the pointer is within bounds
-      if (p1 < word1.length()) completeWord.append(word1.charAt(p1));
-      if (p2 < word2.length()) completeWord.append(word2.charAt(p2));
-      p1++;
-      p2++;
+      // ? Append characters if the indices are between bounds
+      if (p1 < word1.length()) mergedString.append(word1.charAt(p1++));
+      if (p2 < word2.length()) mergedString.append(word2.charAt(p2++));
     }
-    // ? Convert the StringBuilder to a string and return it
-    return completeWord.toString();
+    return mergedString.toString();
+  }
   }
 }
 ```

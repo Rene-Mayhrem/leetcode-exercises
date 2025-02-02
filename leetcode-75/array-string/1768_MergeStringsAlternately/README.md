@@ -11,8 +11,8 @@ The first approach is to take consideration of the pointer of every word. So, le
 3. **Conditionals**: Conditionals are used to append characters only if there are characters left to be added.
 
 # Complexity
-- **Time complexity:** 
-- **Space complexity:**
+- **Time complexity:** O(n), where **n** is the length of the longer string.
+- **Space complexity:** O(1), as no additional space proportional to the input size is used.
 
 # Code
 ```java []
